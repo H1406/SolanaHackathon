@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | My Website</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="index.html">My Website</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="auth-links">
+                    <a href="#" id="logout-btn" class="btn">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Welcome, <span id="user-name">User</span>!</h1>
+                    <p>Last login: <span id="last-login">April 25, 2025</span></p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Account Overview</h3>
+                        <div class="dashboard-content">
+                            <p>Email: <span id="user-email">user@example.com</span></p>
+                            <p>Account Type: <span id="account-type">Standard</span></p>
+                            <p>Member Since: <span id="member-since">April 2025</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>Activity</h3>
+                        <div class="dashboard-content">
+                            <p>Recent logins: 3</p>
+                            <p>Last IP: 192.168.1.1</p>
+                            <a href="#" class="btn btn-small">View All Activity</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>Settings</h3>
+                        <div class="dashboard-content">
+                            <a href="#" class="dashboard-link">Update Profile</a>
+                            <a href="#" class="dashboard-link">Change Password</a>
+                            <a href="#" class="dashboard-link">Privacy Settings</a>
+                            <a href="#" class="dashboard-link">Notifications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
