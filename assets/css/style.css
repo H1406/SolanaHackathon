@@ -95,14 +95,24 @@ img {
 
 .btn-block {
     display: block;
-    width: 100%;
+    width: 25%;
 }
 
 .btn-small {
     padding: 5px 10px;
     font-size: 0.875rem;
+    color: var(--secondary-color);
 }
-
+.walletbtn{
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+.walletbtn:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color:white;
+}
 /* Header and Navigation */
 header {
     background-color: white;
@@ -260,7 +270,27 @@ nav {
 .dashboard-link:last-child {
     border-bottom: none;
 }
-
+.auth-header{
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid var(--border-color);
+    margin: 0;
+}
+.auth-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:  20px;
+}
+.auth-card{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.auth-form{
+    padding: 40px 0;
+}
 /* Footer */
 footer {
     background-color: var(--dark-color);

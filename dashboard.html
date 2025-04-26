@@ -28,7 +28,6 @@
             <div class="container">
                 <div class="dashboard-header">
                     <h1>Welcome, <span id="user-name">User</span>!</h1>
-                    <p>Last login: <span id="last-login">April 25, 2025</span></p>
                 </div>
                 
                 <div class="dashboard-grid">
@@ -44,8 +43,8 @@
                     <div class="dashboard-card">
                         <h3>Activity</h3>
                         <div class="dashboard-content">
-                            <p>Recent logins: 3</p>
-                            <p>Last IP: 192.168.1.1</p>
+                            <!-- <p>Recent logins: 3</p>
+                            <p>Last IP: 192.168.1.1</p> -->
                             <a href="#" class="btn btn-small">View All Activity</a>
                         </div>
                     </div>
@@ -59,6 +58,14 @@
                             <a href="#" class="dashboard-link">Notifications</a>
                         </div>
                     </div>
+                    <div class="dashboard-card">
+                        <h3>Wallet</h3>
+                        <div class="dashboard-content">
+                            <div class="wallet">
+                                <a href="#" class="btn btn-small walletbtn" id="connect-wallet">Connect Wallet</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -66,11 +73,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 My Website. All rights reserved.</p>
+            <p>&copy; 2025 Cross-chain Converter. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/auth.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
+    <script type="module" src="assets/js/wallet.js"></script>
 </body>
 </html>

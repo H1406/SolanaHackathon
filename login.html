@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | My Website</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/auth.css">
 </head>
 <body>
     <header>
@@ -16,16 +15,16 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li class="auth-links">
-                    <a href="login.html" class="btn btn-primary">Login</a>
-                    <a href="register.html" class="btn">Register</a>
+                    <a href="login.html" class="btn">Login</a>
+                    <a href="register.html" class="btn btn-primary" id="register-link">Register</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="auth-container">
-            <div class="auth-card">
+        <section class="auth-form">
+            <div class="auth-container">
                 <h2>Login</h2>
                 <form id="login-form">
                     <div class="form-group">
@@ -61,6 +60,6 @@
     </footer>
 
     <script src="assets/js/validation.js"></script>
-    <script src="assets/js/auth.js"></script>
+    <script type="module" src="assets/js/auth.js"></script>
 </body>
 </html>
