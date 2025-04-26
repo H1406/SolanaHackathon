@@ -1,6 +1,6 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Main JavaScript loaded');
-    
     // Check if user is logged in
     const isLoggedIn = checkLoginStatus();
     updateNavigation(isLoggedIn);
@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load user data on dashboard if applicable
     if (window.location.pathname.includes('dashboard')) {
         loadDashboardData();
+    }
+    const isConnected = checkWalletConnection();
+    if (isConnected) {
+        console.log('Wallet connected');
+        updateWalletUI();
     }
 });
 
@@ -38,14 +43,6 @@ function updateNavigation(isLoggedIn) {
                 <a href="#" id="logout-btn" class="btn">Logout</a>
             `;
             
-            // Add logout event listener
-            const logoutBtn = document.getElementById('logout-btn');
-            if (logoutBtn) {
-                logoutBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    logout();
-                });
-            }
         }
     } else {
         // If user is not logged in and we're on a protected page, redirect to login
@@ -96,14 +93,20 @@ function getUserData() {
     }
 }
 
+
 /**
- * Logout the user
+ * Check if user's wallet is connected
+ * @returns {boolean} Connection status
  */
-function logout() {
-    // Clear authentication data
-    localStorage.removeItem('authToken');
-    localStorage.removeItem('userData');
-    
-    // Redirect to home page
-    window.location.href = 'index.html';
+function checkWalletConnection() {
+    return window.walletData ? JSON.parse(window.walletData).connected : false;
+}
+
+function updateWalletUI() {
+    const wallet = document.querySelector('.wallet');
+    if (wallet) {
+        wallet.innerHTML = `
+            <a href="#" class="btn btn-small walletbtn" id="disconnect-wallet">Disconnect Wallet</a>
+        `;
+    }
 }
